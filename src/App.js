@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Header from './Header';
+import styled from 'styled-components'
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,12 +12,21 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Routes>
-      <Route path='/' element={<h1>welcome Home</h1> }></Route>
-      <Route path='/header' element={<Header/>}></Route>
-      </Routes>
+        <Header/>
+        <AppBody>
+          <Routes>
+            <Route path='/' exact>
+            
+            </Route>
+          </Routes>
+        </AppBody>
+
       </Router>
     </div>
   );
 }
 export default App;
+
+const AppBody=styled.div`
+
+`
