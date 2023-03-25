@@ -4,8 +4,7 @@ import Header from './Header';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 function App() {
   return (
@@ -16,9 +15,7 @@ function App() {
       <Route path='/header' element={<Header/>}></Route>
       </Routes>
       </Router>
-    
     </div>
   );
 }
-
 export default App;
