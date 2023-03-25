@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './Header';
+import Header from './components/Header';
 import styled from 'styled-components'
+import Sidebar from './components/Sidebar';
 
 import {
   BrowserRouter as Router,
@@ -14,9 +15,10 @@ function App() {
       <Router>
         <Header/>
         <AppBody>
+          <Sidebar/>
           <Routes>
             <Route path='/' exact>
-            
+               
             </Route>
           </Routes>
         </AppBody>
@@ -28,5 +30,6 @@ function App() {
 export default App;
 
 const AppBody=styled.div`
-
+display:flex;
+height:100vh;
 `

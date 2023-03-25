@@ -41,14 +41,14 @@ color:white;
 `
 const HeaderLeft=styled.div`
 display:flex;
-flex:0.3;  
+flex:0.2;  
 align-items:center;
 margin-left:20px;
     
 // taking access over icon 
   > .MuiSvgIcon-root{
-    margin-right:auto;
-    margin-left:30px;
+    margin-left:auto;
+    margin-right:30px;
 
 }
 `
