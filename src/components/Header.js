@@ -41,14 +41,14 @@ color:white;
 `
 const HeaderLeft=styled.div`
 display:flex;
-flex:0.2;  
+flex:0.3;  
 align-items:center;
 margin-left:20px;
     
 // taking access over icon 
   > .MuiSvgIcon-root{
-    margin-left:auto;
-    margin-right:30px;
+    margin-right:auto;
+    margin-left:30px;
 
 }
 `
@@ -68,13 +68,13 @@ background-color:#421f44;
 text-align:center;  
 padding:0 50px;
 color:gray;
-border:1px solid gray;
+border:1px gray solid;
 
 > input{
-    width:100%;
+    
     background-color:transparent;
     border:none;
-    outline:none;
+    outline:0;
     min-width:30vw;
     text-align:center;
     color:white;

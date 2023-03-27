@@ -1,8 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-function SidebarOption({Icon,title}) {
+import {db}  from '../firebase';
+
+function SidebarOption({Icon,title,addCahnnelOption})
+ {
+
+  
+  // Adding the channels into database
+   const addChannel=()=>{
+     const channelname=prompt("Enter the channel name ");
+     if(channelname){
+       db.collection("rooms").add({
+          name:channelname,
+       });
+     }
+   };
+    
+    const SelectChannel=()=>{
+
+    }
   return (
-   <SidebarOptions>
+   <SidebarOptions onClick={addCahnnelOption ? addChannel : SelectChannel} >
     {/* Calling the Icons  */}
      {Icon && <Icon fontsize='small' style={{padding:10}}/>}
        {/* If icon not available below codecomes into play */}
@@ -30,8 +48,15 @@ font-size:12px;
     opacity:0.9;
     background-color:#340e36;
 }
+> h3{
+    font-weight:500;
+}
 
+> h3 > span {
+    padding:15px;
+}
 `
-const SidebarChannel=styled.div`
-
+const SidebarChannel=styled.h3`
+ padding:10px;
+ font-weight:500;
 `
