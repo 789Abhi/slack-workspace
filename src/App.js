@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import styled from 'styled-components'
 import Sidebar from './components/Sidebar';
-
+import Chat from './components/Chat';
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,8 +17,8 @@ function App() {
         <AppBody>
           <Sidebar/>
           <Routes>
-            <Route path='/' exact>
-               
+            <Route path='/' exact  element={<Chat/>}>
+              
             </Route>
           </Routes>
         </AppBody>

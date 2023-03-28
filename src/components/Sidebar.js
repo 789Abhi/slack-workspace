@@ -79,6 +79,7 @@ display:flex;
 border-bottom:1px solid #49274b;
 padding:13px;
 
+
 > .MuiSvgIcon-root{
     padding:8px;
     color:#49274b;
