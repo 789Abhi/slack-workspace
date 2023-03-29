@@ -59,14 +59,12 @@ function Sidebar() {
 
 export default Sidebar;
 
-const SidebarContainer=styled.div`
-    background-color:var(--slack-color);
-    color:white;
-    flex:0.3;
-    border-top:1px solid #49274b;
-    max-width:260px;
-    min-height:1260px;
-    margin-top:45px;
+const SidebarContainer = styled.div`
+  background-color: var(--slack-color);
+  color: white;
+  flex: 0.3;
+  margin-top:45px;
+  overflow-y:auto;
 
   >hr{
     margin:10px 0;
