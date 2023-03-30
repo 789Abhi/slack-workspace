@@ -118,13 +118,15 @@ const HeaderLeft = styled.div`
   align-items: center;
   > h4 {
     display: flex;
-    text-transform: lowercase;
+    text-transform: uppercase;
     margin-right: 10px;
+    color:var(--slack-color);
   }
 
   > h4 > .MuiSvgIcon-root {
     margin-left: 10px;
     font-size: 18px;
+    
   }
 `;
 const ChatMessages = styled.div``;

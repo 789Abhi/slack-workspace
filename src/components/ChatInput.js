@@ -1,10 +1,12 @@
 import Button from '@mui/material/Button';
 import React, { useState } from 'react';
 import Styled from 'styled-components';
-import {db}  from '../firebase';
+import {auth, db}  from '../firebase';
 import firebase from 'firebase/compat/app';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 function ChatInput({channelName,channelId,chatRef}) {
+    const [user] = useAuthState(auth);
     const [input,setInput]=useState(null);
     const sendMessage=(e)=>{
         e.preventDefault();   //prevents refresh
@@ -15,8 +17,8 @@ function ChatInput({channelName,channelId,chatRef}) {
         db.collection('rooms').doc(channelId).collection('messages').add({
             message:input,
             timestamp:firebase.firestore.FieldValue.serverTimestamp(),
-            user:'Abhi',
-            userImage:'https://images.moneycontrol.com/static-mcnews/2021/10/Virat-Kohli-illustration.jpg?impolicy=website&width=1600&height=900'
+            user:user.displayName,
+            userImage:user.photoURL,
             
         });
         chatRef.current.scrollIntoView({

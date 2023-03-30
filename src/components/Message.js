@@ -6,7 +6,7 @@ function Message({message,timestamp,user,userImage}) {
        <img src={userImage} alt="" />
        <MessageInfo>
         <h4>
-            {user} <span>{new Date(timestamp?.toDate()).toUTCString()}</span>
+            {user}<span>{new Date(timestamp?.toDate()).toLocaleString()}</span>
         </h4>
         {message}
        </MessageInfo>
